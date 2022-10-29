@@ -24,6 +24,7 @@ h4{
     color: #08FF00;
     padding: 0.2em 0 0 0.7em;
     text-align: start;
+    font-size: 1.2rem;
 }
 
 input[type="radio"]{
@@ -54,32 +55,40 @@ input[type="radio"]{
 .card-header{
     perspective: 1000px;
     max-height: 13em;
-    padding: 0;
+    padding: 0 0 0.4em 0;
 }
 
 .card-header img{
-    border-radius: 1em 1em 0 0;
-    max-height: 30em;
+    border-radius: 1.2em 1.2em 0 0;
+    height: 10em;
     z-index: 0;
 }
 
 .card-header h3{
     color: #08FF00;
-    padding: 0.4em 0 0 0.7em;
+    padding: 0.7em 0 0 0.8em;
     position: absolute;
+    font-weight: bold;
+    font-size: 1.1rem;
     z-index: 1;
 }
 
+.card-specifications li:before{
+    content: '✓ ';
+    font-size: 1rem;
+}
+
 .card-specifications{
+    text-align: start;
     font-size: 0.8rem;
     color: #E600FF;    
 }
 
 .card-price{
     text-align: center;
-    padding: 0.1em 0.7em 0.3em 0;
+    padding: 0.2em 0.7em 0.3em 0;
     color: #08FF00;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
 }
 
@@ -91,7 +100,24 @@ input[type="radio"]{
     width: 10em;
     border-radius: 0.8em;
     opacity: 0.70;
+    font-size: 1.1rem;
+    color: #060014;
+}
+
+.btn-card:hover{
+    opacity: 1;
     color: white;
+}
+
+.card:hover{
+    transition: transform 0.55s ease;
+    transform: scale(1.03);
+    box-shadow: 0px 3px 15px rgba(9, 255, 0, 0.753);
+}
+
+
+#c1 li:nth-child(+n+4), #c2 li:nth-child(+n+6){
+    opacity: 50%;
 }
 
 #card-2:checked ~ .cards #c2{
