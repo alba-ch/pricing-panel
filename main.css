@@ -1,0 +1,137 @@
+@primary-color: #08FF00;
+@secondary-color: #E600FF;
+@card-color: #060014;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    background-color: #ffffff;
+    background-image: url(img/bg.png);
+    background-repeat: initial;
+    background-size: auto;
+}
+
+footer{
+    background-color: black;
+    position: absolute;
+    width: 100%;
+}
+
+h4{
+    color: #08FF00;
+    padding: 0.2em 0 0 0.7em;
+    text-align: start;
+}
+
+input[type="radio"]{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card{
+    background-color: #060014;
+    height: 30em;
+    width: 17em;
+    border-radius: 1.2em;
+    box-shadow: 0px 3px 15px rgba(8, 255, 0, 0.49);
+}
+
+.cards{
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    margin-bottom: 8em;
+    margin-top: 2em;
+}
+
+.cards label{
+    transition: transform 0.55s ease;
+}
+
+.card-header{
+    perspective: 1000px;
+    max-height: 13em;
+    padding: 0;
+}
+
+.card-header img{
+    border-radius: 1em 1em 0 0;
+    max-height: 30em;
+    z-index: 0;
+}
+
+.card-header h3{
+    color: #08FF00;
+    padding: 0.4em 0 0 0.7em;
+    position: absolute;
+    z-index: 1;
+}
+
+.card-specifications{
+    font-size: 0.8rem;
+    color: #E600FF;    
+}
+
+.card-price{
+    text-align: center;
+    padding: 0.1em 0.7em 0.3em 0;
+    color: #08FF00;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.btn-card{
+    background-color: #08FF00;
+    padding-top: 0.5em;
+    font-size: large;
+    height: 2.5em;
+    width: 10em;
+    border-radius: 0.8em;
+    opacity: 0.70;
+    color: white;
+}
+
+#card-2:checked ~ .cards #c2{
+    transform: translate3d(0, 0, 1px);
+}
+
+#card-2:checked ~ .cards #c3{
+    transform: translate3d(-30%, 10%, 0);
+    opacity: 65%;
+}
+
+#card-2:checked ~ .cards #c1{
+    transform: translate3d(30%, 10%, 0);
+    opacity: 65%;
+}
+
+#card-1:checked ~ .cards #c2{
+    transform: translate3d(70%, 10%, 0px);
+    opacity: 65%;
+}
+
+#card-1:checked ~ .cards #c3{
+    transform: translate3d(-170%, 10%, 0px);
+    opacity: 65%;
+}
+
+#card-1:checked ~ .cards #c1{
+    transform: translate3d(100%, 0, 1px);
+}
+
+#card-3:checked ~ .cards #c2{
+    transform: translate3d(-70%, 10%, 0px);
+    opacity: 65%;
+}
+
+#card-3:checked ~ .cards #c1{
+    transform: translate3d(170%, 10%, 0px);
+    opacity: 65%;
+}
+
+#card-3:checked ~ .cards #c3{
+    transform: translate3d(-100%, 0%, 1px);
+}
