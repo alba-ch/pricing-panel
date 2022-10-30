@@ -41,7 +41,8 @@ input[type="radio"]{
 }
 
 .cards{
-    position: relative;
+    display: flex;
+    justify-content: center;
     transform-style: preserve-3d;
     perspective: 1000px;
     margin-bottom: 8em;
@@ -120,44 +121,90 @@ input[type="radio"]{
     opacity: 50%;
 }
 
-#card-2:checked ~ .cards #c2{
-    transform: translate3d(0, 0, 1px);
+@media only screen and (max-width: 750px) {
+    #card-2:checked ~ .cards #c2{
+        transform: translate3d(0, 0, 1px) scale(1.05);
+    }
+
+    #card-2:checked ~ .cards #c3{
+        transform: translate3d(-65%, 0, 0px);
+        opacity: 65%;
+    }
+
+    #card-2:checked ~ .cards #c1{
+        transform: translate3d(65%, 0, 0px);
+        opacity: 65%;
+    }
+
+    #card-1:checked ~ .cards #c2{
+        transform: translate3d(35%, 0, 0px);
+        opacity: 65%;
+    }
+
+    #card-1:checked ~ .cards #c3{
+        transform: translate3d(-135%, 0, 0px);
+        opacity: 65%;
+    }
+
+    #card-1:checked ~ .cards #c1{
+        transform: translate3d(100%, 0, 1px) scale(1.05);
+    }
+
+    #card-3:checked ~ .cards #c2{
+        transform: translate3d(-35%, 0, 0px);
+        opacity: 65%;
+    }
+
+    #card-3:checked ~ .cards #c1{
+        transform: translate3d(135%, 0, 0px);
+        opacity: 65%;
+    }
+
+    #card-3:checked ~ .cards #c3{
+        transform: translate3d(-100%, 0%, 1px) scale(1.05);
+    }
 }
 
-#card-2:checked ~ .cards #c3{
-    transform: translate3d(-30%, 10%, 0);
-    opacity: 65%;
-}
+@media only screen and (min-width: 750px) {
+    #card-2:checked ~ .cards #c2{
+        transform: translate3d(0, 0, 1px);
+    }
 
-#card-2:checked ~ .cards #c1{
-    transform: translate3d(30%, 10%, 0);
-    opacity: 65%;
-}
+    #card-2:checked ~ .cards #c3{
+        transform: translate3d(-30%, 10%, 0);
+        opacity: 65%;
+    }
 
-#card-1:checked ~ .cards #c2{
-    transform: translate3d(70%, 10%, 0px);
-    opacity: 65%;
-}
+    #card-2:checked ~ .cards #c1{
+        transform: translate3d(30%, 10%, 0);
+        opacity: 65%;
+    }
 
-#card-1:checked ~ .cards #c3{
-    transform: translate3d(-170%, 10%, 0px);
-    opacity: 65%;
-}
+    #card-1:checked ~ .cards #c2{
+        transform: translate3d(70%, 10%, 0px);
+        opacity: 65%;
+    }
 
-#card-1:checked ~ .cards #c1{
-    transform: translate3d(100%, 0, 1px);
-}
+    #card-1:checked ~ .cards #c3{
+        transform: translate3d(-170%, 10%, 0px);
+        opacity: 65%;
+    }
 
-#card-3:checked ~ .cards #c2{
-    transform: translate3d(-70%, 10%, 0px);
-    opacity: 65%;
-}
+    #card-1:checked ~ .cards #c1{
+        transform: translate3d(100%, 0, 1px);
+    }
 
-#card-3:checked ~ .cards #c1{
-    transform: translate3d(170%, 10%, 0px);
-    opacity: 65%;
-}
+    #card-3:checked ~ .cards #c2{
+        transform: translate3d(-70%, 10%, 0px);
+        opacity: 65%;
+    }
 
-#card-3:checked ~ .cards #c3{
-    transform: translate3d(-100%, 0%, 1px);
+    #card-3:checked ~ .cards #c1{
+        transform: translate3d(170%, 10%, 0px);
+        opacity: 65%;
+    }
+
+    #card-3:checked ~ .cards #c3{
+        transform: translate3d(-100%, 0%, 1px);
+    }
 }
