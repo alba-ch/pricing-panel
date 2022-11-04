@@ -141,6 +141,21 @@
         </div>
     </section>
 
+    <!-- PLAN DIALOG -->
+    <dialog id="dialog">
+        <div class="dialog-content">
+            <h4 class="dialog-title"></h4>
+            <p class="dialog-text">Enter your email</p>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                <button type="submit" class="btn btn-submit">Submit</button>
+            </div>
+            <p class="dialog-text-email"></p>
+            <button class="btn btn-close">Close</button>
+        </div>
+    </dialog>
+
     <footer class="text-center text-black mt-5 fixed-bottom">
         <div class="container mt-3">
             <section class="mb-0">
@@ -165,6 +180,34 @@
         </div>
         <div class="text-center text-dark p-3"> © 2022 Copyright by <a class="text-dark" href="">Alba Chicharro</a></div>
     </footer>
+
+    <!-- Dialog script -->
+    <script>
+        const dialog = document.getElementById('dialog');
+        const btnSubmit = document.querySelector('.btn-submit');
+        const btnPlan = document.querySelectorAll('.btn-card');
+        const btnClose = document.querySelector('.btn-close');
+
+        var title = document.querySelector('.dialog-title');
+        var textEmail = document.querySelector('.dialog-text-email');
+
+        btnPlan.forEach(btn => {
+            btn.addEventListener('click', () => {
+                dialog.showModal();
+                title.innerHTML = btn.innerHTML;
+            });
+        });
+
+        btnClose.addEventListener('click', () => {
+            dialog.close();
+        });
+
+        btnSubmit.addEventListener('click', () => {
+            textEmail.innerHTML = 'Thank you! We sent you an email with more details.';
+        });
+
+    </script>
+
 </body>
 
 </html>
