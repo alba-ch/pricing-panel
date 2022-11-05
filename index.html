@@ -142,17 +142,20 @@
     </section>
 
     <!-- PLAN DIALOG -->
-    <dialog id="dialog">
-        <div class="dialog-content">
-            <h4 class="dialog-title"></h4>
-            <p class="dialog-text">Enter your email</p>
+    <dialog id="dialog" class="dialog">
+        <button type="button" class="btn-close close text-black-50" aria-label="Close">X</button>
+        <h4 class="dialog-title"></h4>
+        <div class="dialog-content p-3">
+            <p class="dialog-text">Fill the contact data and we will send you a message.</p>
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                <button type="submit" class="btn btn-submit">Submit</button>
+                <form action="javascript:submitedEmail()">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-submit">Submit</button>
+                </form>
             </div>
             <p class="dialog-text-email"></p>
-            <button class="btn btn-close">Close</button>
+            
         </div>
     </dialog>
 
@@ -199,12 +202,13 @@
         });
 
         btnClose.addEventListener('click', () => {
+            textEmail.innerHTML = '';
             dialog.close();
         });
 
-        btnSubmit.addEventListener('click', () => {
-            textEmail.innerHTML = 'Thank you! We sent you an email with more details.';
-        });
+        function submitedEmail() {
+            textEmail.innerHTML = 'Thank you! We sent you an email with more details :)';
+        };
 
     </script>
 
