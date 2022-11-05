@@ -32,6 +32,11 @@ input[type="radio"]{
     pointer-events: none;
 }
 
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 .card{
     background-color: #060014;
     height: 30em;
@@ -56,7 +61,7 @@ input[type="radio"]{
 .card-header{
     perspective: 1000px;
     max-height: 13em;
-    padding: 0 0 0.4em 0;
+    padding: 0 0 0.4em;
 }
 
 .card-header img{
@@ -96,7 +101,6 @@ input[type="radio"]{
 .btn-card{
     background-color: #08FF00;
     padding-top: 0.5em;
-    font-size: large;
     height: 2.5em;
     width: 10em;
     border-radius: 0.8em;
@@ -118,9 +122,9 @@ input[type="radio"]{
 
 .dialog{
     margin-top: 8em;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     border-radius: 1.2em;
-    height: 40em;
+    height: 38em;
     width: 30em;
     color: #ffffff;
     border: transparent;
@@ -148,6 +152,20 @@ input[type="radio"]{
 
 .dialog .dialog-text-email{
     color: #E600FF;
+}
+
+#mainNavbar .navbar-brand {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: left;
+    opacity: 0.3;
+    color: #E600FF;
+    transition: 0.2s ease;
+}
+
+#mainNavbar .navbar-brand:hover{
+    opacity: 1;
 }
 
 #c1 li:nth-child(+n+4), #c2 li:nth-child(+n+6){
