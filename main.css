@@ -9,7 +9,7 @@ html {
 body {
     font-family: "Noto Sans", sans-serif;
     background-color: #ffffff;
-    background-image: url(img/bg.png);
+    background-image: url(res/bg.png);
     background-repeat: initial;
     background-size: auto;
 }
@@ -121,10 +121,9 @@ input[type="radio"]{
 }
 
 .dialog{
-    margin-top: 8em;
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 1.2em;
-    height: 38em;
+    height: fit-content;
     width: 30em;
     color: #ffffff;
     border: transparent;
