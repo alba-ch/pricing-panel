@@ -12,6 +12,7 @@ body {
     background-image: url(res/bg.png);
     background-repeat: initial;
     background-size: auto;
+   
 }
 
 footer{
@@ -29,8 +30,8 @@ h4{
 
 input[type="radio"]{
     opacity: 0;
-    pointer-events: none;
 }
+    
 
 .btn:focus {
     outline: none;
@@ -46,6 +47,8 @@ input[type="radio"]{
 }
 
 .cards{
+    width: 100%;
+    position: fixed;
     display: flex;
     justify-content: center;
     transform-style: preserve-3d;
@@ -157,7 +160,6 @@ input[type="radio"]{
     font-style: italic;
     font-weight: 400;
     font-size: 1rem;
-    text-align: left;
     opacity: 0.3;
     color: #E600FF;
     transition: 0.2s ease;
@@ -171,7 +173,11 @@ input[type="radio"]{
     opacity: 50%;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 749px) {
+    #mainNavbar .navbar-brand {
+        text-align: center;
+    }
+
     #card-2:checked ~ .cards #c2{
         transform: translate3d(0, 0, 1px) scale(1.05);
     }
@@ -216,6 +222,11 @@ input[type="radio"]{
 }
 
 @media only screen and (min-width: 750px) {
+    #mainNavbar .navbar-brand {
+        text-align: left;
+        margin-left: 2em;
+    }
+
     #card-2:checked ~ .cards #c2{
         transform: translate3d(0, 0, 1px);
     }
