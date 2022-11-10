@@ -32,7 +32,6 @@ Also, on mobile:
 ### More interface screenshots
 ![web-m](https://user-images.githubusercontent.com/90827999/200971386-6382fcbf-2c28-4d91-bf44-8508f7f9e262.png)
 ![mobile](https://user-images.githubusercontent.com/90827999/200971379-3fb6e08e-7496-45af-acc1-aba80c88ed6b.png)
-![mobile-2](https://user-images.githubusercontent.com/90827999/200971380-00309b77-131d-4d0c-89c7-4f68b884c8a9.png)
 
 ## Technologies
 
